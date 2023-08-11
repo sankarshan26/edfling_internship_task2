@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+.sidebar {
+  font-family: "Poppins", sans-serif;
+  background: rgba(33, 93, 79, 1);
+  color: rgba(255, 255, 255, 1);
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  width: 30%;
+  max-width: 256px;
+}
+.sidebar_heading {
+  color: #cb8461;
+}
+.account-img{
+  width: 23px;
+  height: 24px;
+}
+.sidebar_list{
+  border-left: 1px solid #cb8461;
+  padding-left: 0rem;
+}
+.arrow-img {
+  width: 7px;
+  height: 13px;
+}

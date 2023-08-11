@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@600&family=EB+Garamond:ital,wght@1,800&family=Poppins:wght@200;400&display=swap');
+
+/* .cont_container {
+  width: 75%;
+} */
+.cont-header {
+  background: #215d4f;
+  height: 2.5rem;
+  width: 100%;
+}
+.home-icon {
+  width: 20px;
+}
+.Acc_ {
+  color: rgba(203, 132, 97, 1);
+  min-width: fit-content;
+}
+.head-sec {
+  font-family: Poppins;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.content{
+  border-bottom: 1px solid rgba(166, 166, 166, 1)
+}
+.main-container_{
+  font-family: 'Poppins', sans-serif;
+}
+.btn{
+  min-width: fit-content;
+    background: #215D4F;
+    color: #FFFFFF;
+    font-weight: 200;
+    border: 1px solid rgba(0, 0, 0, 1);
+    line-height: 27px;
+    /* margin-left: 10%; */
+    border-radius: 10px;
+}

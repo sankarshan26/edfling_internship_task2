@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@600&family=EB+Garamond:ital,wght@1,800&family=Poppins:wght@200;400;500&display=swap');
+
+.vclass{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    border: 1px solid black;
+}
+.heading_{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500; 
+}
+.list-item-heading{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+.btn-search{
+    background: rgba(33, 93, 79, 1);
+
+}
