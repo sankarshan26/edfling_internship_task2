@@ -109,7 +109,7 @@ return (
     </div>
    
 
-            <div className="heading_ font-medium text-left text-xl">
+            <div className="heading_ font-medium text-left text-xl my-4">
               Add Meeting
             </div>
             <div className='border border-black rounded-xl flex flex-col h-full'>
