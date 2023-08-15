@@ -147,6 +147,7 @@ function Desktop67_sidebar({ act_st,  handle_act_st,  act_sub_st,  handle_sub_ac
           }
           onClick={() => {
             handle_act_st("Accounts");
+            handle_sub_act_st("");
           }}
         > 
           <img src={Accounts} className="inline mr-5 w-5" alt="dashboard" />
