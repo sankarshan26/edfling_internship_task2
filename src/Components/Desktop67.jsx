@@ -35,6 +35,7 @@ function Desktop67() {
               className="Acc inline text-white hover:cursor-pointer"
               onClick={() => {
                 handle_act_st("");
+                handle_sub_act_st("");
               }}
             >
              {act_st}
