@@ -4,12 +4,14 @@ import "../CSS/Desktop67.css";
 import home_icon from "../Utils/Images/home-icon.png";
 import arr_icon from "../Utils/Images/arrow_icon.png";
 import Side from "./Desktop67_sidebar";
+import Small from "./Desktop67_sidebar_small"
 import Jisti from "./Modules/Jisti";
 import Wallet from "../Components/Accounts/Wallet";
 import Profit_loss from "../Components/Accounts/Profitloss";
 import IE from "../Components/Accounts/IE";
 import Bank from "../Components/Accounts/BankAccont";
 import FT from "../Components/Accounts/FundTransfer";
+import { Menu, X } from "lucide-react";
 
 function Desktop67() {
   const [act_st, setAct_st] = useState("Accounts");
@@ -21,14 +23,23 @@ function Desktop67() {
   function handle_sub_act_st(sub_st) {
     setAct_sub_st(sub_st);
   }
-  
-  return (
-    <div className="mt-12 mx-5 md:mx-10 flex flex-row gap-8">
-      <Side act_st={act_st} handle_act_st={handle_act_st} act_sub_st={act_sub_st} handle_sub_act_st={handle_sub_act_st} />
-      <div className="cont_container flex flex-col grow ">
 
-        <div className="cont-header rounded-lg flex items-center justify-start md:justify-end p-8 ">
-          <div className="flex justify-between items-center w-fit gap-2 md:gap-5 pr-3">
+  const [isopn, setIsopn] = useState(false);
+  function handle_isopn(){
+    setIsopn(!isopn);
+    // console.log(isopn);
+  }
+  return (
+    <div className="main-container mt-12 mx-5 md:mx-10 flex flex-row justify-between gap-3 h-fit ">
+      <Side act_st={act_st} handle_act_st={handle_act_st} act_sub_st={act_sub_st} handle_sub_act_st={handle_sub_act_st} />
+      <div className=" w-full  flex-col ">
+
+        <div className="cont-header rounded-lg flex items-center justify-between lg:justify-end p-8 " >
+        <Menu color="white" className="lg:hidden" onClick={()=>{
+          handle_isopn();
+        }}/>
+          <div className="flex justify-between items-center gap-2 md:gap-5 pr-3">
+
             <img src={home_icon} alt="home" className="home-icon inline" />
             <img src={arr_icon} alt="arrow" className="arr-icon inline" />
             <div
@@ -49,6 +60,11 @@ function Desktop67() {
             <div className="Acc_ inline ">{act_sub_st}</div>
           </div>
         </div>
+        <div className="relative">
+        {
+          
+          isopn && <Small act_st={act_st} handle_act_st={handle_act_st} act_sub_st={act_sub_st} handle_sub_act_st={handle_sub_act_st} isopn={isopn} handle_isopn={handle_isopn} /> 
+        }</div>
 
         {act_sub_st === "Jisti" && ( 
           <Jisti />

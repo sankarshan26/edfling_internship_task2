@@ -17,9 +17,9 @@ import boy from "../Utils/Images/boy-photo.png";
 import "../CSS/Desktop67_sidebar.css";
 
 
-function Desktop67_sidebar({ act_st,  handle_act_st,  act_sub_st,  handle_sub_act_st,}) {
+function Desktop67_sidebar_small({ act_st,  handle_act_st,  act_sub_st,  handle_sub_act_st,isopn, handle_isopn}) {
   return (
-    <div className="sidebar hidden lg:block pl-8">
+    <div className="sidebar absolute lg:block pl-8 ">
       <div className="sidebar_heading relative w-fit px-4 py-4 mt-4">
         <img src={ellip} alt="ellip" className="ellip1 absolute" />
         <img src={ellip} alt="ellip" className="ellip2 absolute" />
@@ -36,6 +36,7 @@ function Desktop67_sidebar({ act_st,  handle_act_st,  act_sub_st,  handle_sub_ac
           onClick={() => {
             handle_act_st("Dashboard");
             handle_sub_act_st("");
+            handle_isopn();
           }}
         >
           <img src={Dashboard} className="inline mr-5 w-5" alt="dashboard" />
@@ -49,7 +50,7 @@ function Desktop67_sidebar({ act_st,  handle_act_st,  act_sub_st,  handle_sub_ac
           }
           onClick={() => {
             handle_act_st("Admin");
-            handle_sub_act_st("");
+            handle_sub_act_st("");handle_isopn();
           }}
         >
           <img src={Admin} className="inline mr-5 w-5" alt="dashboard" />
@@ -63,7 +64,7 @@ function Desktop67_sidebar({ act_st,  handle_act_st,  act_sub_st,  handle_sub_ac
           }
           onClick={() => {
             handle_act_st("Academics");
-            handle_sub_act_st("");
+            handle_sub_act_st("");handle_isopn();
           }}
         >
           <img src={Academics} className="inline mr-5 w-5" alt="dashboard" />
@@ -77,7 +78,7 @@ function Desktop67_sidebar({ act_st,  handle_act_st,  act_sub_st,  handle_sub_ac
           }
           onClick={() => {
             handle_act_st("Study Material");
-            handle_sub_act_st("");
+            handle_sub_act_st("");handle_isopn();
           }}
         >
           <img src={Student} className="inline mr-5 w-5" alt="dashboard" />
@@ -91,7 +92,7 @@ function Desktop67_sidebar({ act_st,  handle_act_st,  act_sub_st,  handle_sub_ac
           }
           onClick={() => {
             handle_act_st("Student");
-            handle_sub_act_st("");
+            handle_sub_act_st("");handle_isopn();
           }}
         >
           <img src={Student} className="inline mr-5 w-5" alt="dashboard" />
@@ -105,7 +106,7 @@ function Desktop67_sidebar({ act_st,  handle_act_st,  act_sub_st,  handle_sub_ac
           }
           onClick={() => {
             handle_act_st("Examination");
-            handle_sub_act_st("");
+            handle_sub_act_st("");handle_isopn();
           }}
         >
           <img src={Examination} className="inline mr-5 w-5" alt="dashboard" />
@@ -119,7 +120,7 @@ function Desktop67_sidebar({ act_st,  handle_act_st,  act_sub_st,  handle_sub_ac
           }
           onClick={() => {
             handle_act_st("HR");
-            handle_sub_act_st("");
+            handle_sub_act_st("");handle_isopn();
           }}
         >
           <img src={HR} className="inline mr-5  w-5" alt="dashboard" />
@@ -133,7 +134,7 @@ function Desktop67_sidebar({ act_st,  handle_act_st,  act_sub_st,  handle_sub_ac
           }
           onClick={() => {
             handle_act_st("Leaves");
-            handle_sub_act_st("");
+            handle_sub_act_st("");handle_isopn();
           }}
         >
           <img src={Leaves} className="inline mr-5 w-5" alt="dashboard" />
@@ -160,6 +161,7 @@ function Desktop67_sidebar({ act_st,  handle_act_st,  act_sub_st,  handle_sub_ac
                 className="Account-list-item siderbar_list_item py-2 rounded-lg hover:cursor-pointer"
                 onClick={() => {
                   handle_sub_act_st("Wallet Deposit");
+                  handle_isopn();
                 }}
               >
                 <span
@@ -173,7 +175,7 @@ function Desktop67_sidebar({ act_st,  handle_act_st,  act_sub_st,  handle_sub_ac
               <li
                 className="Account-list-item siderbar_list_item py-2 rounded-lg hover:cursor-pointer"
                 onClick={() => {
-                  handle_sub_act_st("Income & Expense");
+                  handle_sub_act_st("Income & Expense");handle_isopn();
                 }}
               >
                 <span
@@ -187,7 +189,7 @@ function Desktop67_sidebar({ act_st,  handle_act_st,  act_sub_st,  handle_sub_ac
               <li
                 className="Account-list-item siderbar_list_item py-2 rounded-lg hover:cursor-pointer"
                 onClick={() => {
-                  handle_sub_act_st("Profit & Loss");
+                  handle_sub_act_st("Profit & Loss");handle_isopn();
                 }}
               >
                 <span
@@ -199,7 +201,7 @@ function Desktop67_sidebar({ act_st,  handle_act_st,  act_sub_st,  handle_sub_ac
               <li
                 className="Account-list-item siderbar_list_item py-2 rounded-lg hover:cursor-pointer"
                 onClick={() => {
-                  handle_sub_act_st("Bank Account");
+                  handle_sub_act_st("Bank Account");handle_isopn();
                 }}
               >
                 <span
@@ -211,7 +213,7 @@ function Desktop67_sidebar({ act_st,  handle_act_st,  act_sub_st,  handle_sub_ac
               <li
                 className="Account-list-item siderbar_list_item py-2 rounded-lg hover:cursor-pointer"
                 onClick={() => {
-                  handle_sub_act_st("Fund Transfer");
+                  handle_sub_act_st("Fund Transfer");handle_isopn();
                 }}
               >
                 <span
@@ -231,7 +233,7 @@ function Desktop67_sidebar({ act_st,  handle_act_st,  act_sub_st,  handle_sub_ac
           }
           onClick={() => {
             handle_act_st("Utilities");
-            handle_sub_act_st("");
+            handle_sub_act_st("");handle_isopn();
           }}
         >
           <img src={Utilities} className="inline mr-5 w-5" alt="dashboard" />
@@ -246,6 +248,7 @@ function Desktop67_sidebar({ act_st,  handle_act_st,  act_sub_st,  handle_sub_ac
           onClick={() => {
             handle_act_st("Reports");
             handle_sub_act_st("");
+            handle_isopn();
           }}
         >
           <img src={Reports} className="inline mr-5 w-5" alt="dashboard" />
@@ -259,7 +262,7 @@ function Desktop67_sidebar({ act_st,  handle_act_st,  act_sub_st,  handle_sub_ac
           }
           onClick={() => {
             handle_act_st("Settings");
-            handle_sub_act_st("");
+            handle_sub_act_st("");handle_isopn();
           }}
         >
           <img src={Settings} className="inline mr-5 w-5" alt="dashboard" />
@@ -285,7 +288,7 @@ function Desktop67_sidebar({ act_st,  handle_act_st,  act_sub_st,  handle_sub_ac
               <li
                 className="Account-list-item siderbar_list_item py-2 rounded-lg hover:cursor-pointer"
                 onClick={() => {
-                  handle_sub_act_st("Jisti");
+                  handle_sub_act_st("Jisti");handle_isopn();
                 }}
               >
                 <span className={act_sub_st === "Jisti" ? "opacity-50" : ""}>Jisti</span>
@@ -294,11 +297,12 @@ function Desktop67_sidebar({ act_st,  handle_act_st,  act_sub_st,  handle_sub_ac
           </div>
         </li>
       </ul>
-      <div className="sidebar-img mt-40">
-        <img src={boy} alt="boy" />
+      <div className="sidebar-img mt-20">
+        <img src={boy} alt="boy" className="h-60"/>
+
       </div>
     </div>
   );
 }
 
-export default Desktop67_sidebar;
+export default Desktop67_sidebar_small;

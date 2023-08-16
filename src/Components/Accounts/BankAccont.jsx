@@ -81,8 +81,8 @@ function BankAccont() {
               className="border w:2/5 md:w-2/3 p-2 rounded-lg"
             />
           </div>
-          <div className="mt-24">
-          <input type="submit" value="Submit" className="btn px-16 py-2 ml-44 hover:cursor-pointer" /></div>
+          <div className="mt-24 text-center sm:text-left">
+          <input type="submit" value="Submit" className="btn px-16 py-2 ml-0 sm:ml-44 hover:cursor-pointer " /></div>
           </div>
         </form>
       

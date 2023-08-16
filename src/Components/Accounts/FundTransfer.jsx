@@ -80,8 +80,8 @@ function FundTransfer() {
           className="border w:2/5 md:w-2/3 p-2 rounded-lg"
         />
       </div>
-      <div className="mt-24">
-      <input type="submit" value="Confirm" className="btn px-8 md:px-16 py-2 ml-20 md:ml-44 hover:cursor-pointer" /></div>
+      <div className="mt-24 text-center md:text-left">
+      <input type="submit" value="Confirm" className="btn px-8 md:px-16 py-2 ml-0 md:ml-44 hover:cursor-pointer" /></div>
       </div>
     </form>
   );

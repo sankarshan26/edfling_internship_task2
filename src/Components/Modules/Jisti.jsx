@@ -18,12 +18,12 @@ const handleChange = event => {
 };
 
 return (
-<div className="flex flex-col w-full mt-12 pl-8">
-        <div className="cont-header rounded-lg text-white flex p-8 px-6 items-center text-xl font-medium vclass">
+<div className="flex flex-col mt-12 pl-8">
+        <div className="cont-header rounded-lg text-white flex p-6 md:p-8 md:px-6 items-center text-sm md:text-xl font-medium vclass">
           Virtual Class
         </div>
-        <div className="detailed flex flex-col md:flex-row mt-6 ">
-          <div className="AddClass flex-wrap flex-col flex md:flex-nowrap md:w-1/4 mr-4 p-4 h-full">
+        <div className=" w-full justify-evenly detailed flex flex-wrap flex-row md:flex-row mt-6 ">
+          <div className="AddClass flex-wrap flex-col flex  xl:flex-nowrap  mr-4 p-4 h-full w-4/5 2xl:w-fit">
             <div className="heading_ font-medium text-center text-xl">
               Add Virtual Class
             </div>
@@ -79,32 +79,36 @@ return (
               </ul>
            
           </div>
-          <div className="VirtualClass flex flex-col grow p-4">
+          <div className="VirtualClass flex flex-col ">
             <div className="heading_ font-medium flex justify-between text-xl"><span>Virtual Class List</span><button className="text-sm btn-search px-4 rounded-lg">Search</button></div>
 
-            <div className="my-8 border border-black rounded-xl">
-        <table className='w-full'>
-            <tr>
-                <th className='font-normal py-2 px-2'>#</th>
-                <th className='font-normal py-2 px-2'>Class</th>
-                <th className='font-normal py-2 px-2'>Class(Sec)</th><th className='font-normal py-2 px-2'>Meeting Id</th>
-                <th className='font-normal py-2 px-2'>Topic</th>
-                <th className='font-normal py-2 px-2'>Date</th> <th className='font-normal py-2 px-2'>Duration</th> <th className='font-normal py-2 px-2'>Start/Join</th> <th className='font-normal py-2 px-2'>Start/Join Before</th>
-            </tr>
+            <div className="my-8  border border-black rounded-xl">
+        <table className='w-full '>
+            
+              <thead>
+              <tr>
+                <th className='font-normal '>#</th>
+                <th className='font-normal '>Class</th>
+                <th className='font-normal '>Class(Sec)</th><th className='font-normal '>Meeting Id</th>
+                <th className='font-normal'>Topic</th>
+                <th className='font-normal '>Date</th> <th className='font-normal '>Duration</th> <th className='font-normal '>Start/Join</th> <th className='font-normal '>Start/Join Before</th></tr></thead>
+            
+            <tbody>
             {data.map((val, key) => {
                 return (
                     <tr className='tr_' key={key}>
-                        <td className='text-center font-normal py-2 px-2'>{val.id}</td>
-                        <td className='text-center font-normal py-2 px-2'>{val.Class}</td>
-                        <td className='text-center font-normal py-2 px-2'>{val.clsec}</td>
-                        <td className='text-center font-normal py-2 px-2'>{val.mid}</td>
-                        <td className='text-center font-normal py-2 px-2'>{val.tpc}</td>
-                        <td className='text-center font-normal py-2 px-2'>{val.date}</td>
-                        <td className='text-center font-normal py-2 px-2'>{val.duration}</td>
-                        <td className='text-center font-normal py-2 px-2'>{val.stj}</td>
-                        <td className='text-center font-normal py-2 px-2'>{val.stjb}</td>
+                        <td className='text-center font-normal py-2 px-2 '>{val.id}</td>
+                        <td className='text-center font-normal py-2 px-2 '>{val.Class}</td>
+                        <td className='text-center font-normal py-2 px-2 '>{val.clsec}</td>
+                        <td className='text-center font-normal py-2 px-2 '>{val.mid}</td>
+                        <td className='text-center font-normal py-2 px-2 '>{val.tpc}</td>
+                        <td className='text-center font-normal py-2 px-2 '>{val.date}</td>
+                        <td className='text-center font-normal py-2 px-2 '>{val.duration}</td>
+                        <td className='text-center font-normal py-2 px-2 '>{val.stj}</td>
+                        <td className='text-center font-normal py-2 px-2 '>{val.stjb}</td>
                     </tr>)
             })}
+            </tbody>
         </table>
     </div>
    
