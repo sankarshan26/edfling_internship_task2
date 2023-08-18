@@ -6,10 +6,16 @@ import Account from "./Components/Account";
 import Desktop67 from "./Components/Desktop67";
 
 function App() {
+  const [isopn, setIsopn] = React.useState(false);
+  function handle_isopn(){
+    setIsopn(!isopn);
+    // console.log(isopn);
+  }
   return (
+    
     <>
-    <Navbar />
-     <Desktop67 />
+    <Navbar handle_isopn={handle_isopn}/>
+     <Desktop67 isopn={isopn} handle_isopn={handle_isopn} />
     <Footer />
     </>
   );

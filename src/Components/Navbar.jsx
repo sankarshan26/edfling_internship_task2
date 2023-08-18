@@ -4,7 +4,12 @@ import "../CSS/Navbar.css";
 import logo from "../images/navbar/logo.png";
 import { Menu, X } from "lucide-react";
 import profile from "../Utils/Images/Ellipse 215.png";
-const Navbar = () => {
+import new_ from "../images/navbar/Ellipse 219.png";
+import girl from "../images/navbar/girl.png";
+import group from "../images/navbar/Group.png";
+
+
+function Navbar ({handle_isopn}) {
   const [act, setAct] = useState("Home");
 
   const [isopen, setOpen] = useState("false");
@@ -28,6 +33,23 @@ const profile_ = (
     <li className="ite p-1">View Profile</li>
     <li className="ite p-1">Setting</li>
     <li className="ite p-1">Logout</li>
+  </ul>
+)
+
+const notification_ = (
+  <ul className="profile absolute right-4 top-0 text-white p-4 flex flex-col justify-between outline-none" style={{background : "#215d4f"}}>
+    <li className="notifiaction_ite p-1" ><img src={new_} alt="new" /><span className="">We're excited to announce the launch of our new course, [Course Name]! This course is designed to help you [briefly describe the course objective or outcome].<span className="orange hover:cursor-pointer">View details</span></span></li>
+    <li className="notifiaction_ite p-1" ><img src={new_} alt="new" /><span className="">We're excited to announce the launch of our new course, [Course Name]! This course is designed to help you [briefly describe the course objective or outcome].<span className="orange hover:cursor-pointer">View details</span></span></li>
+    <li className="notifiaction_ite p-1" ><img src={new_} alt="new" /><span className="">We're excited to announce the launch of our new course, [Course Name]! This course is designed to help you [briefly describe the course objective or outcome].<span className="orange hover:cursor-pointer">View details</span></span></li>
+    <li className="notifiaction_ite p-1" ><img src={new_} alt="new" /><span className="">We're excited to announce the launch of our new course, [Course Name]! This course is designed to help you [briefly describe the course objective or outcome].<span className="orange hover:cursor-pointer">View details</span></span></li>
+    
+
+    <li className="notifiaction_ite p-1" ><img src={new_} alt="new" className="invisible" /><span >We're excited to announce the launch of our new course, [Course Name]! This course is designed to help you [briefly describe the course objective or outcome].<span className="orange hover:cursor-pointer">View details</span></span></li>
+    <li className="notifiaction_ite p-1" ><img src={new_} alt="new" className="invisible" /><span >We're excited to announce the launch of our new course, [Course Name]! This course is designed to help you [briefly describe the course objective or outcome].<span className="orange hover:cursor-pointer">View details</span></span></li><li className="notifiaction_ite p-1" ><img src={new_} alt="new" className="invisible" /><span >We're excited to announce the launch of our new course, [Course Name]! This course is designed to help you [briefly describe the course objective or outcome].<span className="orange hover:cursor-pointer">View details</span></span></li>
+
+    <li className="notifiaction_ite p-1 mt-40" style={{background : "#215d4f"}}><img src={girl} alt="girl"  className="absolute left-0 w-full mt-64" style={{background : "#215d4f"}}/>
+    <img src={group} alt="" className="absolute right-0 -mt-2 w-28"/></li>
+    
   </ul>
 )
   return (
@@ -261,7 +283,9 @@ const profile_ = (
       <div className="flex lg:hidden flex-row flex-nowrap mt-2 mx-4 justify-between">
         {/* left portion hamburger menu*/}
         <div className="left flex items-center">
-          <Menu color="darkgreen" />
+        <Menu color="darkgreen" className="lg:hidden" onClick={()=>{
+          handle_isopn();
+        }}/>
         </div>
 
         {/* center logo image  */}
@@ -305,6 +329,7 @@ const profile_ = (
       </div>
       <div className="relative">
         {pop_up==="profile" && profile_}
+        {pop_up==="notification" && notification_}
       </div>
     </>
   );

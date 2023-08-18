@@ -19,7 +19,7 @@ import "../CSS/Desktop67_sidebar.css";
 
 function Desktop67_sidebar_small({ act_st,  handle_act_st,  act_sub_st,  handle_sub_act_st,isopn, handle_isopn}) {
   return (
-    <div className="sidebar absolute lg:block pl-8 ">
+    <div className="sidebar absolute lg:block pl-8 min-w-fit">
       <div className="sidebar_heading relative w-fit px-4 py-4 mt-4">
         <img src={ellip} alt="ellip" className="ellip1 absolute" />
         <img src={ellip} alt="ellip" className="ellip2 absolute" />
