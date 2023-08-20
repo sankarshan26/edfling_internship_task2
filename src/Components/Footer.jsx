@@ -18,17 +18,17 @@ export default function Footer() {
           </div>
         </div>
         {/* middle */}
-        <div className="middle py-5 flex flex-wrap md:flex-nowrap w-4/5 items-center justify-evenly md:justify-between gap-y-8 gap-x-14">
+        <div className="middle py-5 flex flex-col sm:flex-row flex-wrap md:flex-nowrap w-4/5 items-center justify-evenly md:justify-between gap-y-8 gap-x-14">
           <ul className="gap-3 flex flex-col items-left">
             <li className="heading text-left py-1
             ">About</li>
             <li className="text-left  hover:cursor-pointer">Overview</li>
-            <li className="text-lft hover:cursor-pointer">Courses</li>
+            <li className="text-left hover:cursor-pointer">Courses</li>
             <li className="text-left hover:cursor-pointer">Tutorials</li>
             <li className="text-left  hover:cursor-pointer">Pricing&nbsp;Plan</li>
             <li className="text-left hover:cursor-pointer">Releases</li>
           </ul>
-          <span className="line hidden lg:block">&nbsp;</span>
+          <span className="line md:hidden lg:block ">&nbsp;</span>
           <ul className="gap-3 flex flex-col items-left">
             <li className="heading text-center py-1">Company</li>
             <li className="text-left hover:cursor-pointer">About Us</li>
@@ -37,7 +37,7 @@ export default function Footer() {
             <li className="text-left  hover:cursor-pointer">Media Kits</li>
             <li className="text-left  hover:cursor-pointer">Contact Us</li>
           </ul>
-          <span className="line hidden lg:block">&nbsp;</span>
+          <span className="line md:hidden lg:block ">&nbsp;</span>
           <ul className="gap-3 flex flex-col items-start">
             <li className="heading text-left py-1">Resources</li>
             <li className="text-left  hover:cursor-pointer">Blog</li>
@@ -46,7 +46,7 @@ export default function Footer() {
             <li className="text-left  hover:cursor-pointer">Help-Center</li>
             <li className="text-left hover:cursor-pointer">Tutorials</li>
           </ul>
-          <span className="line hidden lg:block">&nbsp;</span>
+          <span className="line md:hidden lg:block ">&nbsp;</span>
           <ul className="gap-3 flex flex-col items-left">
             <li className="heading text-left py-1 ">Social</li>
             <li className="text-left  hover:cursor-pointer">Twitter</li>
@@ -55,7 +55,7 @@ export default function Footer() {
             <li className="text-left  hover:cursor-pointer">Discord</li>
             <li className="text-left hover:cursor-pointer">Instagram</li>
           </ul>
-          <span className="line hidden lg:block">&nbsp;</span>
+          <span className="line md:hidden lg:block ">&nbsp;</span>
           <ul className="gap-3 flex flex-col items-left">
             <li className="heading text-left py-1">Legal</li>
             <li className="text-left  hover:cursor-pointer">Terms</li>
