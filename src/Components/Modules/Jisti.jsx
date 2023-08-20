@@ -85,13 +85,13 @@ return (
             <div className="my-8  border border-black rounded-xl">
         <table className='w-full '>
             
-              <thead>
+              
               <tr>
                 <th className='font-normal '>#</th>
                 <th className='font-normal '>Class</th>
-                <th className='font-normal '>Class(Sec)</th><th className='font-normal '>Meeting Id</th>
+                <th className='font-normal displayno'>Class(Sec)</th><th className='font-normal displayno'>Meeting Id</th>
                 <th className='font-normal'>Topic</th>
-                <th className='font-normal '>Date</th> <th className='font-normal '>Duration</th> <th className='font-normal '>Start/Join</th> <th className='font-normal '>Start/Join Before</th></tr></thead>
+                <th className='font-normal '>Date</th> <th className='font-normal '>Duration</th> <th className='font-normal _displayno_'>Start/Join</th> <th className='font-normal displayno_'>Start/Join Before</th></tr>
             
             <tbody>
             {data.map((val, key) => {
@@ -99,13 +99,13 @@ return (
                     <tr className='tr_' key={key}>
                         <td className='text-center font-normal py-2 px-2 '>{val.id}</td>
                         <td className='text-center font-normal py-2 px-2 '>{val.Class}</td>
-                        <td className='text-center font-normal py-2 px-2 '>{val.clsec}</td>
-                        <td className='text-center font-normal py-2 px-2 '>{val.mid}</td>
+                        <td className='text-center font-normal py-2 px-2 displayno'>{val.clsec}</td>
+                        <td className='text-center font-normal py-2 px-2 displayno'>{val.mid}</td>
                         <td className='text-center font-normal py-2 px-2 '>{val.tpc}</td>
                         <td className='text-center font-normal py-2 px-2 '>{val.date}</td>
                         <td className='text-center font-normal py-2 px-2 '>{val.duration}</td>
-                        <td className='text-center font-normal py-2 px-2 '>{val.stj}</td>
-                        <td className='text-center font-normal py-2 px-2 '>{val.stjb}</td>
+                        <td className='text-center font-normal py-2 px-2 _displayno_'>{val.stj}</td>
+                        <td className='text-center font-normal py-2 px-2 displayno_'>{val.stjb}</td>
                     </tr>)
             })}
             </tbody>
