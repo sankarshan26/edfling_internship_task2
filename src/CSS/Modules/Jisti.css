@@ -39,3 +39,9 @@
         display: none;
     }
 }
+
+@media screen and (max-width:310px){
+    .small_font{
+        font-size: 12px;
+    }
+}
