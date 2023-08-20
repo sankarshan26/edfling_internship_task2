@@ -22,3 +22,20 @@
     font-family: 'Poppins', sans-serif;
     border-radius: 1rem;
 }
+
+@media screen and (max-width:640px){
+    .displayno{
+        display: none;
+    }
+}
+
+@media screen and (max-width:500px){
+    .displayno_{
+        display: none;
+    }
+}
+@media screen and (max-width:375px){
+    ._displayno_{
+        display: none;
+    }
+}
