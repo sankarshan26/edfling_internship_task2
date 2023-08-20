@@ -87,23 +87,23 @@ return (
             
               
               <tr>
-                <th className='font-normal '>#</th>
-                <th className='font-normal '>Class</th>
+                <th className='font-normal small_font'>#</th>
+                <th className='font-normal small_font'>Class</th>
                 <th className='font-normal displayno'>Class(Sec)</th><th className='font-normal displayno'>Meeting Id</th>
-                <th className='font-normal'>Topic</th>
-                <th className='font-normal '>Date</th> <th className='font-normal '>Duration</th> <th className='font-normal _displayno_'>Start/Join</th> <th className='font-normal displayno_'>Start/Join Before</th></tr>
+                <th className='font-normal small_font'>Topic</th>
+                <th className='font-normal small_font'>Date</th> <th className='font-normal small_font'>Duration</th> <th className='font-normal _displayno_'>Start/Join</th> <th className='font-normal displayno_'>Start/Join Before</th></tr>
             
             <tbody>
             {data.map((val, key) => {
                 return (
                     <tr className='tr_' key={key}>
-                        <td className='text-center font-normal py-2 px-2 '>{val.id}</td>
-                        <td className='text-center font-normal py-2 px-2 '>{val.Class}</td>
+                        <td className='text-center font-normal py-2 px-2 small_font'>{val.id}</td>
+                        <td className='text-center font-normal py-2 px-2 small_font'>{val.Class}</td>
                         <td className='text-center font-normal py-2 px-2 displayno'>{val.clsec}</td>
                         <td className='text-center font-normal py-2 px-2 displayno'>{val.mid}</td>
-                        <td className='text-center font-normal py-2 px-2 '>{val.tpc}</td>
-                        <td className='text-center font-normal py-2 px-2 '>{val.date}</td>
-                        <td className='text-center font-normal py-2 px-2 '>{val.duration}</td>
+                        <td className='text-center font-normal py-2 px-2 small_font'>{val.tpc}</td>
+                        <td className='text-center font-normal py-2 px-2 small_font'>{val.date}</td>
+                        <td className='text-center font-normal py-2 px-2 small_font'>{val.duration}</td>
                         <td className='text-center font-normal py-2 px-2 _displayno_'>{val.stj}</td>
                         <td className='text-center font-normal py-2 px-2 displayno_'>{val.stjb}</td>
                     </tr>)
