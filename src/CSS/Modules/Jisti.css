@@ -4,7 +4,7 @@
     border-top: 1px solid black;
 }
 
-.browse-btn{
+.browse-btn-{
     font-size: 10px;
     background: rgba(33, 93, 79, 1);
     padding: 2px 8px ;
@@ -40,8 +40,13 @@
     }
 }
 
-@media screen and (max-width:310px){
+@media screen and (max-width:318px){
     .small_font{
         font-size: 12px;
+    }
+    .wr{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px;
     }
 }

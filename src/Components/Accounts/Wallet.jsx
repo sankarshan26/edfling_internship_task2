@@ -5,23 +5,23 @@ function Wallet() {
             <div className="main-container_ rounded-2xl w-full h-2/4 p-5 md:p-8 mt-24 border border-black">
           <ul className="head-sec flex justify-evenly">
             <li className="time">
-              <img src={bottom_arr} alt="btm-arrow" className="inline w-3 mr-2" />
+              <img src={bottom_arr} alt="btm-arrow" className="down-arrow-icon inline w-3 " />
               Name
             </li>
             <li className="time">
-              <img src={bottom_arr} alt="btm-arrow" className="inline w-3 mr-2" />
+              <img src={bottom_arr} alt="btm-arrow" className="down-arrow-icon inline w-3 " />
               Amount
             </li>
             <li className="time">
-              <img src={bottom_arr} alt="btm-arrow" className="inline w-3 mr-2" />
+              <img src={bottom_arr} alt="btm-arrow" className="down-arrow-icon inline w-3 " />
               Status
             </li>
             <li className="time">
-              <img src={bottom_arr} alt="btm-arrow" className="inline w-3 mr-2" />
+              <img src={bottom_arr} alt="btm-arrow" className="down-arrow-icon inline w-3 " />
               Note
             </li>
             <li className="time">
-              <img src={bottom_arr} alt="btm-arrow" className="inline w-3 mr-2" />
+              <img src={bottom_arr} alt="btm-arrow" className="down-arrow-icon inline w-3 " />
               Date
             </li>
           </ul>

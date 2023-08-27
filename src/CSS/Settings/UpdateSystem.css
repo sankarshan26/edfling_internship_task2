@@ -1,0 +1,44 @@
+.top-heading{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500; 
+    font-size: 22px;
+    /* line-height: 64px; */
+}
+
+.box{
+    padding: 8px 16px;
+}
+.browse-btn{
+    font-size: 10px;
+    background: rgba(33, 93, 79, 1);
+    padding: 4px 16px ;
+    border-radius: 10px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    margin-top: 4px ;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+.save-file-btn{
+    background: rgba(33, 93, 79, 1);
+    padding: 0.5rem 2.5rem;
+    font-weight: 400; 
+    font-family: 'Poppins', sans-serif;
+    border-radius: 1rem;
+}
+
+@media screen and (max-width:400px){
+    .top-heading{
+        text-align: center;
+    }
+
+    .box{
+        padding: 4px 8px;
+        flex-wrap: wrap;
+        gap: 4px;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -15,18 +15,19 @@ import Modules from "../images/Desktop67/Modules.png";
 import ellip from "../images/Desktop67/Ellipse 218.png";
 import boy from "../Utils/Images/boy-photo.png";
 import "../CSS/Desktop67_sidebar.css";
+import { connect } from 'react-redux';
 
 
 function Desktop67_sidebar({ act_st,  handle_act_st,  act_sub_st,  handle_sub_act_st,}) {
   return (
-    <div className="sidebar hidden lg:block pl-8">
+    <div className="sidebar hidden md:flex md:flex-col pl-8 ">
       <div className="sidebar_heading relative w-fit px-4 py-4 mt-4">
         <img src={ellip} alt="ellip" className="ellip1 absolute" />
         <img src={ellip} alt="ellip" className="ellip2 absolute" />
-        Admin Pannel
+        Admin&nbsp;Pannel
       </div>
-
-      <ul className="mt-6 w-fit">
+      <div className="flex-1 flex flex-col justify-between">
+      <ul className="mt-6 w-fit ">
         <li
           className={
             act_st === "Dashboard"
@@ -263,7 +264,54 @@ function Desktop67_sidebar({ act_st,  handle_act_st,  act_sub_st,  handle_sub_ac
           }}
         >
           <img src={Settings} className="inline mr-5 w-5" alt="dashboard" />
-          Settings
+          Settings<img src={down_arr} alt="down-arrow" className= {act_st==="Settings" ? "inline w-3 ml-8" : "hidden"}/>
+        </li>
+        <li>
+          <div className={act_st === "Settings" ? "block" : "hidden"}>
+            <ul className="Account-list pl-8 text-left">
+              <li
+                className="Account-list-item siderbar_list_item py-2 rounded-lg hover:cursor-pointer"
+                onClick={() => {
+                  handle_sub_act_st("Update System");
+                }}
+              >
+                <span
+                  className={
+                    act_sub_st === "Update System" ? "opacity-50" : ""
+                  }
+                >
+                  Update System 
+                </span>
+              </li>
+              <li
+                className="Account-list-item siderbar_list_item py-2 rounded-lg hover:cursor-pointer"
+                onClick={() => {
+                  handle_sub_act_st("Backup Settings");
+                }}
+              >
+                <span
+                  className={
+                    act_sub_st === "Backup Settings" ? "opacity-50" : ""
+                  }
+                >
+                  Backup Settings
+                </span>
+              </li>
+              <li
+                className="Account-list-item siderbar_list_item py-2 rounded-lg hover:cursor-pointer"
+                onClick={() => {
+                  handle_sub_act_st("Language Settings");
+                }}
+              >
+                <span
+                  className={act_sub_st === "Language Settings" ? "opacity-50" : ""}
+                >
+                  Language Settings
+                </span>
+              </li>
+              
+            </ul>
+          </div>
         </li>
         <li
           className={
@@ -294,11 +342,16 @@ function Desktop67_sidebar({ act_st,  handle_act_st,  act_sub_st,  handle_sub_ac
           </div>
         </li>
       </ul>
-      <div className="sidebar-img mt-40">
-        <img src={boy} alt="boy" />
+      <div className="sidebar-img  mt-0  flex items-end">
+        <img src={boy} alt="boy" className=""/>
+      </div>
       </div>
     </div>
   );
 }
 
-export default Desktop67_sidebar;
+const mapStateToProps = (state) => ({
+  isSidebarOpen: state.sidebar.isSidebarOpen,
+});
+
+export default connect(mapStateToProps)(Desktop67_sidebar);

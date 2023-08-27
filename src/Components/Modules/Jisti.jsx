@@ -70,7 +70,7 @@ return (
 
                 <li className=' my-3 '>
                     <span className='list-item-heading'> Attach file
-                  <div className="w-4/5 flex justify-end items-center border border-black rounded-2xl h-7" ><button onClick={click_handler} className='browse-btn'>
+                  <div className="w-4/5 flex justify-end items-center border border-black rounded-2xl h-7" ><button onClick={click_handler} className='browse-btn-'>
                     Browse
                   </button></div></span>
                     <input type="file" style={{display : 'none'}} ref={hiddenFileInput}
@@ -80,7 +80,7 @@ return (
            
           </div>
           <div className="VirtualClass flex flex-col ">
-            <div className="heading_ font-medium flex justify-between text-xl"><span>Virtual Class List</span><button className="text-sm btn-search px-4 rounded-lg">Search</button></div>
+            <div className="heading_ wr font-medium flex justify-between text-xl"><span>Virtual Class List</span><button className="text-sm btn-search px-4 py-2 rounded-lg">Search</button></div>
 
             <div className="my-8  border border-black rounded-xl">
         <table className='w-full '>
@@ -140,7 +140,7 @@ return (
 
                   <div>
                     <span className='list-item-heading'> Attach file
-                  <div className="w-4/5 flex justify-end items-center border border-black rounded-2xl h-7" ><button onClick={click_handler} className='browse-btn'>
+                  <div className="w-4/5 flex justify-end items-center border border-black rounded-2xl h-7" ><button onClick={click_handler} className='browse-btn-'>
                     Browse
                   </button></div></span>
                     <input type="file" style={{display : 'none'}} ref={hiddenFileInput}
