@@ -3,11 +3,16 @@ import "../../CSS/Settings/LanguageSettings.css";
 import data from "../Data/Language_List";
 import search from "../../Utils/Images/search.png";
 import down_arrow from "../../Utils/Images/Down_Arrow.png";
+import default_ from "../../images/Settings/default_.jpg";
+import setup from "../../images/Settings/setup.png";
+import export_ from "../../images/Settings/export.png";
+import upload_ from "../../images/Settings/upload.png";
+import remove_ from "../../images/Settings/remove.png";
 import { PanelBottom } from "lucide-react";
 
 function Language_list() {
   return (
-    <div className="flex flex-col px-3">
+    <div className="flex flex-col px-3 ">
       <div className="top-heading mt-6 mb-2">Add Language</div>
       <div className="upload_file_content  flex flex-col">
         <div className="flex flex-col justify-center gap-2 sm:gap-0 sm:flex-row sm:justify-between items-center  border border-black px-4 py-2 rounded-xl">
@@ -53,13 +58,13 @@ function Language_list() {
       </div>
 
       <div className=" relative overflow-x-auto border-2 border-black rounded-xl p-4">
-        <table className="w-full table-auto" >
-          <thead className="w-full border ">
+        <table className="w-full table-auto">
+          <thead className="w-full border border-black" >
             <tr
               className=""
-              style={{ background: "rgba(33, 93, 79, 1)", width:"100%", }}
+              style={{ background: "rgba(33, 93, 79, 1)", width: "100%" }}
             >
-              <th className="px-2s text-center">
+              <th className="px-2 text-center ">
                 LANGUAGE
                 <img src={down_arrow} alt="" className="inline" />
               </th>
@@ -84,7 +89,7 @@ function Language_list() {
           <tbody className="w-full">
             {data.map((val, key) => {
               return (
-                <tr className="border border-black" key={key} > 
+                <tr className="border border-black" key={key}>
                   <td className="text-center font-normal py-2 px-2 small_font ">
                     {val.Language}
                   </td>
@@ -98,11 +103,124 @@ function Language_list() {
                     {val.Status}
                   </td>
 
-                  <td className="text-center font-normal py-2 px-2 ">
-                    <button className="border border-black rounded-xl text-sm font-medium px-2 py-1 w-full">MARK AS DEFAULT</button>
-                  </td>
-                  
+                  <td className="text-center font-normal py-2 px-2 flex flex-col min-w-fit overflow-x-auto gap-2">
+                    {!val.Default && (
+                      <button className="border border-black rounded-xl text-sm font-medium px-2 py-1 w-full">
+                        MARK&nbsp;AS&nbsp;DEFAULT
+                      </button>
+                    )}
 
+                    {val.Default && (
+                      <>
+                        <div
+                          className="flex justify-between min-w-fit gap-3"
+                          style={{ "font-size": "14px" }}
+                        >
+                          <button
+                            style={{ background: "rgba(33, 93, 79, 1)" }}
+                            className="flex items-center justify-center rounded-xl overflow-hidden px-2 border border-black w-2/5 min-w-fit gap-2 font-semibold"
+                          >
+                            <img
+                              src={default_}
+                              alt="default"
+                              className="inline"
+                              style={{ width: "24px", height: "15px" }}
+                            />{" "}
+                            DEFAULT
+                          </button>
+
+                          <button className="flex items-center justify-center gap-2 rounded-xl overflow-hidden px-2 border border-black w-2/5 min-w-fit font-semibold">
+                            <img
+                              src={setup}
+                              alt="default"
+                              className="inline rounded-xl"
+                              style={{ width: "24px", height: "15px" }}
+                            />{" "}
+                            SETUP
+                          </button>
+                        </div>
+                        <div
+                          className="flex justify-between min-w-fit gap-3"
+                          style={{ "font-size": "14px" }}
+                        >
+                          <button className="flex items-center justify-center gap-2 rounded-xl overflow-hidden px-2 border border-black w-2/5 min-w-fit font-semibold">
+                            <img
+                              src={export_}
+                              alt="default"
+                              className="inline rounded-xl"
+                              style={{ width: "24px", height: "15px" }}
+                            />
+                            EXPORT
+                          </button>
+
+                          <button className="flex items-center justify-center gap-2 rounded-xl overflow-hidden px-2 border border-black w-2/5 min-w-fit font-semibold">
+                            <img
+                              src={upload_}
+                              alt="default"
+                              className="inline rounded-xl"
+                              style={{ width: "24px", height: "15px" }}
+                            />
+                            UPLOAD
+                          </button>
+                        </div>
+                      </>
+                    )}
+
+{!val.Default && (
+                      <>
+                        <div
+                          className="flex justify-between min-w-fit gap-3"
+                          style={{ "font-size": "14px" }}
+                        >
+
+                          <button className="flex items-center justify-center gap-2 rounded-xl overflow-hidden px-2 border border-black w-2/5 min-w-fit font-semibold">
+                            <img
+                              src={setup}
+                              alt="default"
+                              className="inline rounded-xl"
+                              style={{ width: "24px", height: "15px" }}
+                            />{" "}
+                            SETUP
+                          </button>
+                          <button className="flex items-center justify-center gap-2 rounded-xl overflow-hidden px-2 border border-black w-2/5 min-w-fit font-semibold">
+                            <img
+                              src={export_}
+                              alt="default"
+                              className="inline rounded-xl"
+                              style={{ width: "24px", height: "15px" }}
+                            />
+                            EXPORT
+                          </button>
+                        </div>
+                        <div
+                          className="flex justify-between min-w-fit gap-3"
+                          style={{ "font-size": "14px" }}
+                        >
+                          
+
+                          <button className="flex items-center justify-center gap-2 rounded-xl overflow-hidden px-2 border border-black w-2/5 min-w-fit font-semibold">
+                            <img
+                              src={upload_}
+                              alt="default"
+                              className="inline rounded-xl"
+                              style={{ width: "24px", height: "15px" }}
+                            />
+                            UPLOAD
+                          </button>
+
+                          <button className="flex items-center justify-center gap-2 rounded-xl overflow-hidden px-2 border border-black w-2/5 min-w-fit font-semibold">
+                            <img
+                              src={remove_}
+                              alt="default"
+                              className="inline rounded-xl"
+                              style={{ width: "24px", height: "15px" }}
+                            />
+                            REMOVE
+                          </button>
+                        </div>
+                      </>
+                    )}
+                  </td>
                 </tr>
               );
             })}

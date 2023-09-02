@@ -346,6 +346,8 @@ import profile from "../Utils/Images/Ellipse 215.png";
 import new_ from "../images/navbar/Ellipse 219.png";
 import girl from "../images/navbar/girl.png";
 import group from "../images/navbar/Group.png";
+
+
 const Header = ({ isSidebarOpen, openSidebar, closeSidebar }) => {
   const [act, setAct] = useState("Home");
 
@@ -361,7 +363,7 @@ const Header = ({ isSidebarOpen, openSidebar, closeSidebar }) => {
 
   const profile_ = (
     <ul
-      className="profile absolute right-4 top-0 text-white p-4 flex flex-col justify-between "
+      className="profile absolute right-4 top-0 text-white p-4 flex flex-col justify-between z-50"
       style={{ background: "#215d4f" }}
     >
       <li className="ite p-1">View Profile</li>
@@ -372,7 +374,7 @@ const Header = ({ isSidebarOpen, openSidebar, closeSidebar }) => {
 
   const notification_ = (
     <ul
-      className="profile absolute right-4 top-0 text-white p-4 flex flex-col justify-between outline-none"
+      className="profile absolute right-4 top-0 text-white p-4 flex flex-col justify-between outline-none z-50"
       style={{ background: "#215d4f" }}
     >
       <li className="notifiaction_ite p-1">
@@ -467,7 +469,7 @@ const Header = ({ isSidebarOpen, openSidebar, closeSidebar }) => {
         {/* left portion of navbar  */}
         <div className="left w-auto md:w-1/5 flex items-center px-2 ">
           {/* for screen smaller than 768px */}
-          <div className="flex flex-col md:hidden">
+          <div className="flex flex-col lg:hidden">
             <button onClick={toggleSidebar} className="yesterday">
               {<Menu />}
             </button>
@@ -509,7 +511,7 @@ const Header = ({ isSidebarOpen, openSidebar, closeSidebar }) => {
         </div>
 
         {/* center portion of navbar  */}
-        <div className="center w-2/4 hidden md:flex">
+        <div className="center w-2/4 hidden lg:flex">
           <ul className="nav-list flex justify-between items-center  w-full ">
             <li
               className="list-item hover:cursor-pointer opacity-50 font-normal"

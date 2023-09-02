@@ -20,7 +20,7 @@ import { connect } from 'react-redux';
 
 function Desktop67_sidebar({ act_st,  handle_act_st,  act_sub_st,  handle_sub_act_st,}) {
   return (
-    <div className="sidebar hidden md:flex md:flex-col pl-8 ">
+    <div className="sidebar hidden lg:flex lg:flex-col pl-8 ">
       <div className="sidebar_heading relative w-fit px-4 py-4 mt-4">
         <img src={ellip} alt="ellip" className="ellip1 absolute" />
         <img src={ellip} alt="ellip" className="ellip2 absolute" />
